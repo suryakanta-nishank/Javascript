@@ -22,25 +22,25 @@ p.run();   // This will call the run method in p
 
 
 //classes and objects in JS
-// class RailwayForm{
-//     submit(){
-//         alert(this.name+"Form Submitted Successfully for the train no "+this.trainno)
-//     }
-//     cancel(){
-//         alert(this.name+"Form Canceled for the train no "+this.trainno)
-//     }
-//     fill(name,trainno){
-//         this.name=name
-//         this.trainno=trainno
-//     }
-// }
-// let SuryaForm = new RailwayForm()
-// SuryaForm.fill("Surya",14316)
-// SuryaForm.submit()
-// SuryaForm.cancel()
-// let sapaForm =new RailwayForm()
-// sapaForm.fill("Sapa",12121)
-// sapaForm.cancel()
+class RailwayForm{
+    submit(){
+        alert(this.name+"Form Submitted Successfully for the train no "+this.trainno)
+    }
+    cancel(){
+        alert(this.name+"Form Canceled for the train no "+this.trainno)
+    }
+    fill(name,trainno){
+        this.name=name
+        this.trainno=trainno
+    }
+}
+let SuryaForm = new RailwayForm()
+SuryaForm.fill("Surya",14316)
+SuryaForm.submit()
+SuryaForm.cancel()
+let sapaForm =new RailwayForm()
+sapaForm.fill("Sapa",12121)
+sapaForm.cancel()
 
 //object destructuring
 const address ={
