@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const handlerInput = document.getElementById('handlerInput');
     const output = document.getElementById('output');
 
-    // Event listener for adding all event listeners
+    // Event listener for adding all event listeners 
     addListenersButton.addEventListener('click', function() {
         handlerButton.addEventListener('click', handleButtonClick);
         handlerButton.addEventListener('dblclick', handleButtonDblClick);
