@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #eaeaea;
+            font-family: Arial, sans-serif;
+        }
+        ul.language {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            border-bottom: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        // Add a new language to the list
+        function addLanguage(langName) {
+            const li = document.createElement('li');
+            li.textContent = langName;
+            document.querySelector('.language').appendChild(li);
+        }
+        addLanguage("Python");
+
+        // Insert a language at the second position
+        function insertLanguage(langName, position) {
+            const li = document.createElement('li');
+            li.textContent = langName;
+            const list = document.querySelector('.language');
+            list.insertBefore(li, list.children[position]);
+        }
+        insertLanguage("Ruby", 1);
+
+        // Replace a language at a specific position
+        function replaceLanguage(newLang, position) {
+            const li = document.createElement('li');
+            li.textContent = newLang;
+            const list = document.querySelector('.language');
+            list.replaceChild(li, list.children[position]);
+        }
+        replaceLanguage("TypeScript", 2);
+
+        // Clone the first language and append it to the list
+        const firstLang = document.querySelector('li:first-child');
+        const clonedLang = firstLang.cloneNode(true);
+        document.querySelector('.language').appendChild(clonedLang);
+
+        // Remove the last language from the list
+        const lastLang = document.querySelector('li:last-child');
+        lastLang.remove();
+
+        // Toggle a class on the first language
+        function toggleHighlight() {
+            const firstLang = document.querySelector('li:first-child');
+            firstLang.classList.toggle('highlight');
+        }
+        toggleHighlight();
+
+        // Modify an attribute of a list item
+        const thirdLang = document.querySelector('li:nth-child(3)');
+        thirdLang.setAttribute('data-type', 'dynamic');
+
+        // Apply CSS styles directly
+        const secondLang = document.querySelector('li:nth-child(2)');
+        secondLang.style.color = 'lightgreen';
+        secondLang.style.fontWeight = 'bold';
+    </script>
+</body>
+</html>
