@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        input {
+            margin: 5px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .submit {
+            font-size: 20px;
+            background-color: rgb(75, 249, 75);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1><u>BMI CALCULATOR</u></h1>
+        <label for="wt">Weight :</label>
+        <input type="number" class="wt">
+        <br>
+        <label for="ht">Height :</label>
+        <input type="number" class="ht">
+        <br>
+        <br>
+        <button class="submit" type="button">Submit</button>
+        <br>
+        <label for="result">Result :</label>
+        <span class="result">Result will appear here</span>
+        <br>
+        <label for="bmi">BMI :</label>
+        <span class="bmi">BMI will appear here</span>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
